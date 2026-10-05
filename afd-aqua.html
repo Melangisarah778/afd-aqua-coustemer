@@ -1,0 +1,186 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>AFD AQUA</title><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Ccircle cx='24' cy='24' r='24' fill='%2322d3ee'/%3E%3Cpath d='M36 14C26 6 10 12 10 26c0 5 4 8 9 8l-3 4 8-1-2-4c5-1 7-6 3-9-5-4-3-9 4-7 3 1 5 3 7-3z' fill='%23ff7a1a'/%3E%3C/svg%3E">
+<style>
+:root{--bg:#effafd;--c:#fff;--tx:#0b2f3d;--mu:#4f7886;--a:#0891b2;--cy:#22d3ee;--g:#16a34a;--o:#ff9f1c;--r:#e11d48;--y:#f5c400;--sh:0 6px 20px #0891b222;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#06232d;--c:#0c3342;--tx:#e8fbff;--mu:#8cc3d1}}
+*{box-sizing:border-box}html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.45 system-ui,'Noto Sans Telugu','Noto Sans Devanagari',sans-serif;padding-bottom:calc(76px + env(safe-area-inset-bottom,0px))}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:linear-gradient(90deg,#0891b2,#22d3ee);color:#fff;display:flex;align-items:center;gap:8px;padding:8px 12px;flex-wrap:wrap}
+.logo{display:flex;align-items:center;gap:6px;font-weight:900;font-size:20px;cursor:pointer}
+nav.top{display:none;gap:4px;flex:1}nav.top a{color:#fff;padding:8px 10px;border-radius:20px;cursor:pointer;font-weight:600;font-size:14px}nav.top a.on,nav.top a:hover{background:#ffffff33}
+select,input{font:inherit;padding:12px;border-radius:12px;border:2px solid #b6e6f0;background:var(--c);color:var(--tx);width:100%}
+header select{width:auto;padding:6px;border:0;font-weight:700}.sp{flex:1}
+.ib{background:#ffffff33;border:0;color:#fff;border-radius:50%;width:38px;height:38px;font-size:18px;cursor:pointer;position:relative}
+main{max-width:1000px;margin:auto;padding:12px}
+.hero{border-radius:24px;padding:24px;color:#fff;background:linear-gradient(135deg,#0891b2,#22d3ee 60%,#4ade80);position:relative;overflow:hidden}
+.hero h1{margin:0 0 8px;font-size:28px}.hero .big{position:absolute;right:-10px;bottom:-20px;font-size:120px;opacity:.25}
+.btn{border:0;border-radius:14px;padding:14px 18px;font:inherit;font-weight:800;cursor:pointer;color:#1a1200;background:var(--o);box-shadow:0 4px 0 #c97800;transition:.15s;margin:4px 4px 0 0}
+.btn:active{transform:translateY(3px);box-shadow:none}.btn.g{background:#22c55e;color:#032;box-shadow:0 4px 0 #15803d}.btn.b{background:#fff;color:#0369a1;box-shadow:0 4px 0 #9fdbe9}.btn.s{padding:9px 12px;font-size:14px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px;margin:14px 0}.grid.w{grid-template-columns:repeat(auto-fill,minmax(250px,1fr))}
+.card{background:var(--c);border-radius:20px;padding:14px;box-shadow:var(--sh);animation:up .4s}
+@keyframes up{from{opacity:0;transform:translateY(10px)}}
+.stat b{font-size:26px;color:var(--a);display:block}h2{margin:18px 0 6px}
+.pc{border-left:6px solid var(--cy);cursor:pointer;transition:.2s}.pc:hover{transform:translateY(-3px)}.pc .mo{font-size:13px;font-weight:700;color:var(--a);margin-top:6px}.pc .pr{font-size:36px;font-weight:900;color:var(--g)}.pc .pr small{font-size:14px;color:var(--mu)}
+.up{color:var(--g)}.dn{color:var(--r)}.fl{color:#b58900}
+.tag{display:inline-block;font-size:11px;font-weight:800;padding:2px 8px;border-radius:10px;background:#fff3c4;color:#7a5a00}.tag.ad{background:#d1fae5;color:#065f46}.tag.lv{background:#dbeafe;color:#1e40af}
+.f{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:8px;margin:8px 0}
+label{font-size:13px;font-weight:700;color:var(--mu)}
+table{width:100%;border-collapse:collapse}td,th{padding:8px;border-bottom:1px solid #8ccfdf55;text-align:left}td.p{font-weight:900;font-size:18px;color:var(--g)}
+.bn{position:fixed;bottom:0;left:0;right:0;display:flex;background:var(--c);box-shadow:0 -4px 20px #0891b233;padding-bottom:env(safe-area-inset-bottom,0px);z-index:9}
+.bn a{flex:1;text-align:center;padding:8px 2px;font-size:11px;font-weight:700;color:var(--mu);cursor:pointer}.bn a span{display:block;font-size:22px}.bn a.on{color:var(--a)}
+#np{display:none;position:fixed;right:8px;top:56px;width:min(340px,94vw);z-index:20}
+.nt{border-left:6px solid var(--o);background:#fff8e1;color:#4a3300;border-radius:14px;padding:10px;margin-bottom:8px}.nt.g{border-color:var(--g);background:#e8fff0;color:#064}
+.res{font-size:22px;font-weight:900;color:#fff;background:linear-gradient(90deg,#16a34a,#22c55e);border-radius:14px;padding:12px;margin-top:8px}
+.ch{overflow-x:auto}.chip{display:inline-block;background:#d8f5fb;color:#075e75;border-radius:20px;padding:6px 12px;margin:3px;font-weight:700;font-size:13px}
+code,pre{background:#0b2f3d;color:#a5f3fc;border-radius:10px;padding:10px;display:block;overflow-x:auto;font-size:12px}
+@media(min-width:800px){nav.top{display:flex}.bn{display:none}body{padding-bottom:20px}.hero h1{font-size:40px}}
+.cb{display:block;text-align:center;text-decoration:none;color:#fff;font-weight:800;font-size:18px;padding:15px;border-radius:16px;margin-top:8px;box-shadow:0 4px 0 #0003}.cb:active{transform:translateY(3px);box-shadow:none}.fab{position:fixed;right:12px;bottom:calc(86px + env(safe-area-inset-bottom,0px));display:flex;flex-direction:column;gap:10px;z-index:8}.fab a{width:56px;height:56px;border-radius:50%;display:grid;place-items:center;font-size:26px;text-decoration:none;box-shadow:0 6px 16px #0004;animation:pl 2s infinite}@keyframes pl{50%{transform:scale(1.07)}}@media(min-width:800px){.fab{bottom:20px}}</style></head><body>
+<header><div class="logo" onclick="go('home')"><svg width="42" height="42" viewBox="0 0 48 48"><circle cx="24" cy="24" r="23" fill="#fff"/><path d="M5 36q5-5 9 0t9 0t9 0t9 0v7H5z" fill="#22d3ee"/><path d="M36 14C26 6 10 12 10 26c0 5 4 8 9 8l-3 4 8-1-2-4c5-1 7-6 3-9-5-4-3-9 4-7 3 1 5 3 7-3z" fill="#ff7a1a"/><path d="M14 20q4 2 6 0M12 26q5 2 8-1M15 31q4 1 6-1" stroke="#fff" stroke-width="1.6" fill="none"/><path d="M36 13q6-7 10-3M36 15q8-1 10 3" stroke="#ff7a1a" stroke-width="1.6" fill="none"/><circle cx="32" cy="14" r="1.7" fill="#0b2f3d"/><path d="M5 40q5-5 9 0t9 0t9 0t9 0" stroke="#0891b2" stroke-width="2.2" fill="none"/></svg>AFD AQUA</div>
+<nav class="top" id="tn"></nav><div class="sp"></div>
+<select id="lg" onchange="L=+this.value;sv('lang',L);document.documentElement.lang=['en','te','hi'][L];render()"><option value="0">English</option><option value="1">తెలుగు</option><option value="2">हिंदी</option></select>
+<a class="ib" href="tel:+917013713646" style="display:grid;place-items:center;text-decoration:none" aria-label="Call">📞</a><button class="ib" onclick="go('search')">🔍</button><button class="ib" onclick="tgN()">🔔</button><button class="ib" onclick="go('profile')">👤</button></header>
+<div id="lm" style="display:none;position:fixed;inset:0;z-index:50;background:linear-gradient(135deg,#0891b2,#22d3ee 60%,#4ade80);place-items:center;padding:20px"><div class="card" style="text-align:center;max-width:360px;width:100%;padding:24px"><div style="font-size:54px">🦐</div><h2 style="margin:4px 0">AFD AQUA</h2><p style="font-weight:700">Choose your language<br>మీ భాషను ఎంచుకోండి<br>अपनी भाषा चुनें</p><button class="btn" style="width:100%;font-size:20px" onclick="pick(0)">English</button><button class="btn g" style="width:100%;font-size:20px" onclick="pick(1)">తెలుగు</button><button class="btn b" style="width:100%;font-size:20px;border:2px solid #9fdbe9" onclick="pick(2)">हिंदी</button></div></div><div class="fab"><a href="https://wa.me/917013713646?text=Hello%20AFD%20AQUA" target="_blank" style="background:#25D366" aria-label="WhatsApp">💬</a><a href="tel:+917013713646" style="background:#16a34a" aria-label="Call">📞</a></div><div id="np"></div><main id="app"></main><div class="bn" id="bn"></div>
+<script>
+const $=s=>document.querySelector(s);
+const ls=(k,d)=>{try{const v=localStorage.getItem('afd_'+k);return v==null?d:JSON.parse(v)}catch(e){return d}};
+const sv=(k,v)=>{try{localStorage.setItem('afd_'+k,JSON.stringify(v))}catch(e){}};
+let L=ls('lang',0),page='home',cur=null,mode='7',q='';
+const T=s=>s.split('|')[L]||s.split('|')[0];
+const U={
+home:'Home|హోమ్|होम',prices:'Market Prices|మార్కెట్ ధరలు|बाज़ार भाव',services:'Aqua Services|ఆక్వా సేవలు|एक्वा सेवाएँ',knowledge:'Knowledge|జ్ఞానం|ज्ञान',tools:'Aqua Tools|ఆక్వా టూల్స్|एक्वा टूल्स',nearby:'Nearby Services|సమీప సేవలు|नज़दीकी सेवाएँ',
+profile:'Profile|ప్రొఫైల్|प्रोफ़ाइल',h1:'Smart Aquaculture Information for Every Farmer|ప్రతి రైతుకు స్మార్ట్ ఆక్వాకల్చర్ సమాచారం|हर किसान के लिए स्मार्ट जलीय कृषि जानकारी',
+h2:'Get market prices, farming information, useful tools and nearby aqua services in one place.|మార్కెట్ ధరలు, వ్యవసాయ సమాచారం, ఉపయోగకరమైన టూల్స్, సమీప ఆక్వా సేవలు — అన్నీ ఒకే చోట.|बाज़ार भाव, खेती की जानकारी, उपयोगी टूल और नज़दीकी एक्वा सेवाएँ — सब एक जगह।',
+bP:'Check Prices|ధరలు చూడండి|भाव देखें',bK:'Aqua Knowledge|ఆక్వా జ్ఞానం|एक्वा ज्ञान',bS:'Find Services|సేవలు కనుగొనండి|सेवाएँ खोजें',
+st1:'Farmers using AFD AQUA|AFD AQUA రైతులు|AFD AQUA किसान',st2:'Total price views|మొత్తం ధర వీక్షణలు|कुल भाव व्यू',st3:"Today's visitors|ఈరోజు సందర్శకులు|आज के विज़िटर",st4:'Active markets|యాక్టివ్ మార్కెట్లు|सक्रिय बाज़ार',st5:'Registered services|నమోదైన సేవలు|पंजीकृत सेवाएँ',
+demoN:'Demo numbers – will come from database|డెమో సంఖ్యలు – డేటాబేస్ నుండి వస్తాయి|डेमो आँकड़े – डेटाबेस से आएँगे',
+state:'State|రాష్ట్రం|राज्य',dist:'District|జిల్లా|ज़िला',mkt:'Market|మార్కెట్|बाज़ार',date:'Date|తేదీ|तारीख',sp:'Species|జాతి|प्रजाति',cnt:'Count / Size|కౌంట్ / సైజ్|काउंट / साइज़',
+kg:'/ KG|/ కిలో|/ किलो',hist:'VIEW 7-DAY HISTORY|7 రోజుల చరిత్ర చూడండి|7 दिन का इतिहास देखें',
+vt:'farmers viewed this price today|రైతులు ఈ ధరను ఈరోజు చూశారు|किसानों ने आज यह भाव देखा',v24:'farmers checked prices in last 24 hours|గత 24 గంటల్లో రైతులు ధరలు చూశారు|पिछले 24 घंटे में किसानों ने भाव देखे',
+lu:'Last Updated|చివరి అప్డేట్|आखिरी अपडेट',src:'Source|మూలం|स्रोत',demo:'DEMO – not real market price|డెమో – నిజమైన ధర కాదు|डेमो – असली भाव नहीं',adm:'Admin-entered|అడ్మిన్ నమోదు|एडमिन द्वारा दर्ज',
+cp:'Current Price|ప్రస్తుత ధర|वर्तमान भाव',hi:'7-Day High|7 రోజుల గరిష్టం|7 दिन का उच्च',lo:'7-Day Low|7 రోజుల కనిష్టం|7 दिन का न्यूनतम',av:'7-Day Average|7 రోజుల సగటు|7 दिन का औसत',ch:'Change|మార్పు|बदलाव',pv:'Previous Day|ముందు రోజు|पिछला दिन',
+b7:'7 Days|7 రోజులు|7 दिन',bT:'Today|ఈరోజు|आज',bC:'Compare Prices|ధరలు పోల్చండి|भाव तुलना',views:'Views|వీక్షణలు|व्यू',back:'← Back|← వెనుకకు|← वापस',
+call:'Call|కాల్|कॉल',view:'View|చూడండి|देखें',dir:'Get Directions|దారి|रास्ता',read:'Read More|మరింత చదవండి|और पढ़ें',
+fn:'Find Nearby|సమీపంలో వెతకండి|नज़दीक खोजें',dst:'Distance|దూరం|दूरी',rat:'Rating|రేటింగ్|रेटिंग',op:'Open now|ఇప్పుడు తెరిచి ఉంది|अभी खुला',all:'All|అన్నీ|सभी',
+calc:'Calculate|లెక్కించండి|गणना करें',srch:'Search markets, species, services, articles…|వెతకండి…|खोजें…',nores:'No results|ఫలితాలు లేవు|कोई परिणाम नहीं',
+upd:'UPDATE PRICE|ధర అప్డేట్|भाव अपडेट करें',price:'Price (₹)|ధర (₹)|भाव (₹)',saved:'Saved as new history record ✔|కొత్త చరిత్ర రికార్డుగా సేవ్ అయింది ✔|नए इतिहास रिकॉर्ड के रूप में सहेजा ✔',
+ntf:'Notifications|నోటిఫికేషన్లు|सूचनाएँ',adT:'Admin Dashboard|అడ్మిన్ డాష్‌బోర్డ్|एडमिन डैशबोर्ड',adN:'Demo admin – add login/authentication before going live.|డెమో అడ్మిన్ – లైవ్ ముందు లాగిన్ జోడించండి.|डेमो एडमिन – लाइव से पहले लॉगिन जोड़ें।',
+ct:'Contact Owner|యజమానిని సంప్రదించండి|मालिक से संपर्क करें',wa:'WhatsApp|వాట్సాప్|व्हाट्सऐप',cn:'Call Now|ఇప్పుడే కాల్ చేయండి|अभी कॉल करें',wc:'Chat on WhatsApp|వాట్సాప్‌లో చాట్ చేయండి|व्हाट्सऐप पर चैट करें',wl:'Welcome|స్వాగతం|स्वागत',chl:'Change language|భాష మార్చండి|भाषा बदलें',login:'Login|లాగిన్|लॉगिन',reg:'Register|నమోదు|रजिस्टर',nm:'Name|పేరు|नाम',ph:'Mobile number (10 digits)|మొబైల్ నంబర్ (10 అంకెలు)|मोबाइल नंबर (10 अंक)',pw:'Password (min 4)|పాస్‌వర్డ్ (కనీసం 4)|पासवर्ड (कम से कम 4)',lo:'Logout|లాగౌట్|लॉगआउट',wr:'Please check the details or password|వివరాలు లేదా పాస్‌వర్డ్ సరిచూడండి|विवरण या पासवर्ड जाँचें',ex:'Already registered – please Login|ఇప్పటికే నమోదైంది – లాగిన్ చేయండి|पहले से पंजीकृत – लॉगिन करें',mng:'Manage|నిర్వహణ|प्रबंधन',res:'Result|ఫలితం|परिणाम'};
+const u=k=>T(U[k]);
+const DAYS=['Today|ఈరోజు|आज','Yesterday|నిన్న|कल','2 Days Ago|2 రోజుల క్రితం|2 दिन पहले','3 Days Ago|3 రోజుల క్రితం|3 दिन पहले','4 Days Ago|4 రోజుల క్రితం|4 दिन पहले','5 Days Ago|5 రోజుల క్రితం|5 दिन पहले','6 Days Ago|6 రోజుల క్రితం|6 दिन पहले'];
+/* ---------- master data (DB: States, Districts, Markets, Species) ---------- */
+const DISTS={'Krishna|కృష్ణా|कृष्णा':['Kaikaluru','Machilipatnam'],'West Godavari|పశ్చిమ గోదావరి|पश्चिम गोदावरी':['Bhimavaram','Narsapuram'],'Nellore|నెల్లూరు|नेल्लोर':['Nellore','Kavali'],'Prakasam|ప్రకాశం|प्रकाशम':['Ongole','Chirala']};
+const SP={Vannamei:{n:'Vannamei Shrimp|వనామీ రొయ్య|वन्नामेई झींगा',i:'🦐',c:{20:650,25:540,30:470,40:385,45:355,50:345,60:325,70:305,80:295,90:285,100:275},u:'Count|కౌంట్|काउंट'},
+Rohu:{n:'Rohu|రోహు|रोहू',i:'🐟',c:{'1 kg':140,'2 kg':155,'3 kg':170}},Catla:{n:'Catla|బొచ్చె|कतला',i:'🐠',c:{'1 kg':150,'2 kg':165,'3 kg':180}},Tilapia:{n:'Tilapia|తిలాపియా|तिलापिया',i:'🐟',c:{'250 g':95,'500 g':110,'1 kg':125}},
+Tiger:{n:'Tiger Shrimp|టైగర్ రొయ్య|टाइगर झींगा',i:'🦐',c:{20:820,30:640,40:520}}};
+const OFF=[0,10,-5,20,30,25,40];
+const dstr=o=>{const d=new Date();d.setDate(d.getDate()-o);return d.toISOString().slice(0,10)};
+const dshort=s=>new Date(s).toLocaleDateString('en-IN',{day:'numeric',month:'short'});
+const mf=m=>1+(m.length%4-1.5)*0.01;
+/* API-ready: replace getHist() with fetch('/api/prices?market=..&species=..&count=..&days=7') */
+function getHist(m,sp,c){const b=SP[sp].c[c],k=m+'|'+sp+'|'+c,o=ls('ovr',{})[k]||{};
+ return OFF.map((x,i)=>{const d=dstr(6-i),a=o[d];return{d,p:a?a.p:Math.round((b+x*b/650)*mf(m)),s:a?'ad':'demo',t:a?a.t:null}})}
+const stats=h=>{const p=h.map(x=>x.p),n=p[6],pr=p[5];return{n,pr,hi:Math.max(...p),lo:Math.min(...p),av:Math.round(p.reduce((a,b)=>a+b)/7),df:n-pr,pc:((n-pr)/pr*100).toFixed(2)}};
+const ar=d=>d>0?['↑','up']:d<0?['↓','dn']:['→','fl'];
+/* ---------- view counter (PriceViews table): unique per browser per day ---------- */
+function track(m,sp,c){const day=dstr(0),k=m+sp+c,seen=ls('seen',{});if(seen[k]===day)return;seen[k]=day;sv('seen',seen);
+ const v=ls('views',{total:0,days:{},log:[]});v.total++;v.days[day]=(v.days[day]||0)+1;v.log=v.log.concat([{k:m+'|'+sp+'|'+c,t:Date.now()}]).slice(-500);sv('views',v)}
+const vw=k=>{const v=ls('views',{total:0,days:{},log:[]});const seed=2400+k.length*7;return{td:seed+(v.days[dstr(0)]||0),h24:680+v.log.filter(x=>Date.now()-x.t<864e5).length,tot:28650+v.total}};
+/* ---------- state ---------- */
+let S={dist:Object.keys(DISTS)[0],mk:'Kaikaluru',sp:'Vannamei',date:dstr(0)};
+const chipSel=(id,opts,val,fn)=>`<select id="${id}" onchange="${fn}(this.value)">${opts.map(o=>`<option value="${o[0]}" ${o[0]==val?'selected':''}>${o[1]}</option>`).join('')}</select>`;
+const mks=()=>(DISTS[S.dist]||[]);
+function setS(k,v){S[k]=v;if(k=='dist')S.mk=mks()[0];if(k=='sp'&&!SP[S.sp])S.sp='Vannamei';render()}
+/* ---------- knowledge / services data ---------- */
+const KN=[['🧱','Pond Preparation|చెరువు తయారీ|तालाब की तैयारी','Dry, plough and lime the pond bed before filling.|చెరువును ఆరబెట్టి, దున్ని, సున్నం వేయండి.|तालाब सुखाएँ, जोतें और चूना डालें।'],
+['💧','Water Quality|నీటి నాణ్యత|पानी की गुणवत्ता','Test pH, DO, ammonia and salinity every day.|pH, DO, అమ్మోనియా, లవణీయత రోజూ పరీక్షించండి.|pH, DO, अमोनिया और खारापन रोज़ जाँचें।'],
+['🌾','Feed Management|మేత నిర్వహణ|फ़ीड प्रबंधन','Feed in small portions; use feed trays to check intake.|తక్కువ మోతాదులో మేత వేయండి; ట్రేలతో తనిఖీ చేయండి.|थोड़ा-थोड़ा फ़ीड दें; ट्रे से खपत जाँचें।'],
+['🦠','Shrimp Diseases|రొయ్యల వ్యాధులు|झींगा रोग','Watch for white spots, red gills, slow feeding.|తెల్ల మచ్చలు, ఎర్ర మొప్పలు, తక్కువ మేత గమనించండి.|सफ़ेद धब्बे, लाल गलफड़े, कम खाना देखें।'],
+['🐡','Fish Diseases|చేపల వ్యాధులు|मछली रोग','Isolate sick fish and treat early.|జబ్బు చేపలను వేరు చేసి త్వరగా చికిత్స చేయండి.|बीमार मछली अलग करें और जल्दी इलाज करें।'],
+['🛡️','Biosecurity|జీవ భద్రత|जैव सुरक्षा','Use crab fencing, bird nets and foot dips.|పీత కంచె, పక్షి వలలు, ఫుట్ డిప్ వాడండి.|केकड़ा बाड़, पक्षी जाल और फुट डिप लगाएँ।'],
+['🌡️','Temperature Management|ఉష్ణోగ్రత నిర్వహణ|तापमान प्रबंधन','Keep water 26–32 °C; deepen pond in summer.|నీరు 26–32 °C ఉంచండి; వేసవిలో లోతు పెంచండి.|पानी 26–32 °C रखें; गर्मी में गहराई बढ़ाएँ।'],
+['🌬️','Oxygen Management|ఆక్సిజన్ నిర్వహణ|ऑक्सीजन प्रबंधन','Run aerators at night; keep DO above 5 ppm.|రాత్రి ఏరేటర్లు నడపండి; DO 5 ppm పైన ఉంచండి.|रात में एरेटर चलाएँ; DO 5 ppm से ऊपर रखें।'],
+['⚗️','pH Management|pH నిర్వహణ|pH प्रबंधन','Ideal pH is 7.5–8.5; avoid big daily swings.|ఆదర్శ pH 7.5–8.5; రోజువారీ తేడా తగ్గించండి.|आदर्श pH 7.5–8.5; रोज़ का उतार-चढ़ाव कम रखें।'],
+['🧂','Salinity|లవణీయత|खारापन','Vannamei grows well at 10–25 ppt.|వనామీ 10–25 ppt లో బాగా పెరుగుతుంది.|वन्नामेई 10–25 ppt में अच्छा बढ़ता है।'],
+['🎣','Harvesting|పట్టుబడి|कटाई','Harvest at market size; chill quickly.|మార్కెట్ సైజులో పట్టండి; వెంటనే చల్లబరచండి.|बाज़ार साइज़ पर पकड़ें; तुरंत ठंडा करें।'],
+['🗓️','Seasonal Farming|సీజనల్ సాగు|मौसमी खेती','Plan stocking around monsoon and summer crops.|వర్షాకాలం, వేసవి పంటలకు తగ్గట్టు ప్లాన్ చేయండి.|मानसून और गर्मी की फसल के अनुसार योजना बनाएँ।']];
+const SV=[['🩺','Aqua Doctors / Experts|ఆక్వా డాక్టర్లు|एक्वा डॉक्टर','Disease diagnosis & pond visits|వ్యాధి నిర్ధారణ|रोग निदान'],['🌾','Feed Suppliers|మేత సరఫరాదారులు|फ़ीड सप्लायर','Quality feed, all brands|నాణ్యమైన మేత|गुणवत्ता वाला फ़ीड'],['💊','Medicine Suppliers|మందుల సరఫరా|दवा सप्लायर','Probiotics & minerals|ప్రోబయోటిక్స్|प्रोबायोटिक्स'],['🌱','Seed Suppliers|సీడ్ సరఫరా|सीड सप्लायर','PCR-tested seed|PCR పరీక్షించిన సీడ్|PCR जाँचा बीज'],['⚙️','Equipment Suppliers|పరికరాలు|उपकरण','Aerators, pumps, nets|ఏరేటర్లు, పంపులు|एरेटर, पंप, जाल'],['🧪','Water Testing Labs|నీటి పరీక్ష ల్యాబ్|जल परीक्षण लैब','Water & soil tests|నీరు, మట్టి పరీక్ష|पानी और मिट्टी जाँच'],['🏭','Hatcheries|హేచరీలు|हैचरी','Healthy broodstock seed|ఆరోగ్యమైన సీడ్|स्वस्थ बीज'],['📋','Aqua Consultants|ఆక్వా సలహాదారులు|एक्वा सलाहकार','Farm planning advice|ఫార్మ్ ప్లానింగ్|फ़ार्म योजना सलाह'],['🛟','Insurance|బీమా|बीमा','Crop insurance help|పంట బీమా|फसल बीमा सहायता'],['🏛️','Government Schemes|ప్రభుత్వ పథకాలు|सरकारी योजनाएँ','Subsidies & power tariff|సబ్సిడీలు|सब्सिडी'],['🚨','Emergency Contacts|అత్యవసర నంబర్లు|आपातकालीन संपर्क','Disease outbreak helpline|అత్యవసర హెల్ప్‌లైన్|आपातकालीन हेल्पलाइन']];
+const NB=[['Sri Sai Aqua Mart','🛒',1.2,4.6,1],['Coastal Hatchery','🏭',3.5,4.3,1],['Aqua Feed Point','🌾',2.1,4.1,0],['Vet Aqua Medicals','💊',0.8,4.8,1],['Delta Water Lab','🧪',5.4,4.5,1],['Blue Wave Consultants','📋',7.9,4.0,0]];
+const NTF=[['g','Vannamei 20 Count price increased today.|వనామీ 20 కౌంట్ ధర ఈరోజు పెరిగింది.|वन्नामेई 20 काउंट का भाव आज बढ़ा।'],['','Market price updated.|మార్కెట్ ధర అప్డేట్ అయింది.|बाज़ार भाव अपडेट हुआ।'],['g','New aqua knowledge article available.|కొత్త ఆక్వా వ్యాసం అందుబాటులో ఉంది.|नया एक्वा लेख उपलब्ध है।'],['','Water quality alert: check DO tonight.|నీటి నాణ్యత హెచ్చరిక: ఈ రాత్రి DO చూడండి.|पानी की चेतावनी: आज रात DO जाँचें।'],['g','Important government scheme available.|ముఖ్యమైన ప్రభుత్వ పథకం అందుబాటులో ఉంది.|महत्वपूर्ण सरकारी योजना उपलब्ध है।']];
+/* ---------- calculators ---------- */
+const CA=[['💧','Water Quality|నీటి నాణ్యత|पानी की गुणवत्ता',[['pH',8],['DO ppm',5],['Ammonia ppm',0.1]],v=>{const ok=v[0]>=7.5&&v[0]<=8.5&&v[1]>=5&&v[2]<=0.3;return ok?'✅ Good|✅ బాగుంది|✅ अच्छा':'⚠️ Check water|⚠️ నీటిని పరీక్షించండి|⚠️ पानी जाँचें'}],
+['🌾','Feed Calculator|మేత కాలిక్యులేటర్|फ़ीड कैलकुलेटर',[['Stock (pcs)',100000],['Avg weight (g)',10],['Feed % body wt',4]],v=>(v[0]*v[1]/1000*v[2]/100).toFixed(1)+' kg/day'],
+['🧮','Stocking Density|స్టాకింగ్ సాంద్రత|स्टॉकिंग घनत्व',[['Seed (pcs)',100000],['Area (acre)',1]],v=>Math.round(v[0]/(v[1]*4047))+' /m²'],
+['💰','Profit Calculator|లాభ కాలిక్యులేటర్|लाभ कैलकुलेटर',[['Harvest (kg)',6000],['Price ₹/kg',345],['Total cost ₹',1500000]],v=>'₹'+(v[0]*v[1]-v[2]).toLocaleString('en-IN')],
+['📈','Survival Rate|జీవన రేటు|उत्तरजीविता दर',[['Stocked',100000],['Harvested',80000]],v=>(v[1]/v[0]*100).toFixed(1)+' %'],
+['⚖️','FCR|FCR|FCR',[['Feed used (kg)',9000],['Biomass gain (kg)',7500]],v=>(v[0]/v[1]).toFixed(2)],
+['📐','Pond Area|చెరువు వైశాల్యం|तालाब क्षेत्रफल',[['Length (m)',100],['Width (m)',40]],v=>(v[0]*v[1]).toLocaleString()+' m² = '+(v[0]*v[1]/4047).toFixed(2)+' acre']];
+const tag=s=>s=='ad'?`<span class="tag ad">${u('adm')}</span>`:`<span class="tag">${u('demo')}</span>`;
+/* ---------- pages ---------- */
+const NAV=[['home','🏠','home'],['prices','₹','prices'],['services','🧪','services'],['knowledge','📚','knowledge'],['tools','🧮','tools'],['nearby','📍','nearby']];
+function go(p,c){page=p;cur=c||null;mode='7';scrollTo(0,0);render()}
+function tgN(){const n=$('#np');n.style.display=n.style.display=='block'?'none':'block'}
+function pcard(sp,c){const h=getHist(S.mk,sp,c),s=stats(h),[a,cl]=ar(s.df),v=vw(S.mk+sp+c);
+ return`<div class="card pc" onclick="go('detail',['${sp}','${c}'])"><b>${SP[sp].i} ${T(SP[sp].n)}</b><div style="font-size:20px;font-weight:800">${c}${SP[sp].u?' '+T(SP[sp].u):''}</div>
+ <div class="pr">₹${s.n}<small> ${u('kg')}</small></div><div class="${cl}"><b>${a} ₹${Math.abs(s.df)} &nbsp;${s.pc>0?'+':''}${s.pc}%</b></div>
+ <div style="font-size:13px;color:var(--mu);margin:6px 0">👁️ ${v.td.toLocaleString()} ${u('views')}</div><div class="mo">${u('hist')} →</div></div>`}
+function filters(){return`<div class="card"><div class="f"><div><label>${u('state')}</label><select><option>Andhra Pradesh</option></select></div>
+<div><label>${u('dist')}</label>${chipSel('d',Object.keys(DISTS).map(k=>[k,T(k)]),S.dist,'setS.bind(null,"dist")')}</div>
+<div><label>${u('mkt')}</label>${chipSel('m',mks().map(k=>[k,k]),S.mk,'setS.bind(null,"mk")')}</div>
+<div><label>${u('date')}</label><input type="date" max="${dstr(0)}" value="${S.date}" onchange="S.date=this.value;render()"></div>
+<div><label>${u('sp')}</label>${chipSel('s',Object.keys(SP).map(k=>[k,T(SP[k].n)]),S.sp,'setS.bind(null,"sp")')}</div></div></div>`}
+function chart(h,m,sp,c){const W=340,H=170,P=26;let ser=[{h,col:'#0891b2'}];
+ if(m=='C')ser=mks().concat(Object.values(DISTS).flat().filter(x=>!mks().includes(x))).slice(0,3).map((k,i)=>({h:getHist(k,sp,c),col:['#0891b2','#ff9f1c','#16a34a'][i],n:k}));
+ if(m=='T'){const mx=Math.max(...Object.values(SP[sp].c));return`<div class="ch">${Object.keys(SP[sp].c).slice(0,8).map(k=>{const p=getHist(S.mk,sp,k)[6].p;return`<div style="display:flex;align-items:center;gap:6px;margin:3px 0"><span style="width:60px">${k}</span><div style="height:20px;border-radius:10px;background:linear-gradient(90deg,#22d3ee,#22c55e);width:${p/Math.max(...Object.keys(SP[sp].c).map(x=>getHist(S.mk,sp,x)[6].p))*70}%"></div><b>₹${p}</b></div>`}).join('')}</div>`}
+ const all=ser.flatMap(s=>s.h.map(x=>x.p)),mn=Math.min(...all)-5,mx=Math.max(...all)+5,X=i=>P+i*(W-2*P)/6,Y=p=>H-P-(p-mn)/(mx-mn)*(H-2*P);
+ return`<svg viewBox="0 0 ${W} ${H}" width="100%">${ser.map(s=>`<polyline fill="none" stroke="${s.col}" stroke-width="3.5" stroke-linejoin="round" points="${s.h.map((x,i)=>X(i)+','+Y(x.p)).join(' ')}"/>${s.h.map((x,i)=>`<circle cx="${X(i)}" cy="${Y(x.p)}" r="4.5" fill="${s.col}"/>`).join('')}`).join('')}
+ ${h.map((x,i)=>`<text x="${X(i)}" y="${H-6}" font-size="10" text-anchor="middle" fill="currentColor">${dshort(x.d)}</text>`).join('')}
+ ${ser.length==1?h.map((x,i)=>`<text x="${X(i)}" y="${Y(x.p)-9}" font-size="10" font-weight="700" text-anchor="middle" fill="currentColor">${x.p}</text>`).join(''):''}</svg>
+ ${ser[0].n?ser.map(s=>`<span class="chip" style="border-left:8px solid ${s.col}">${s.n} ₹${s.h[6].p}</span>`).join(''):''}`}
+function detail(){const[sp,c]=cur,h=getHist(S.mk,sp,c),s=stats(h),[a,cl]=ar(s.df);track(S.mk,sp,c);const v=vw(S.mk+sp+c),last=h[6];
+ return`<button class="btn b s" onclick="go('prices')">${u('back')}</button>
+ <div class="card"><h2 style="margin:0">${SP[sp].i} ${T(SP[sp].n)} — ${c}</h2><div>${u('mkt')}: <b>${S.mk}</b>, ${T(S.dist)}</div>
+ <div class="pc" style="border:0;cursor:auto"><div class="pr" style="font-size:48px">₹${s.n}<small> ${u('kg')}</small></div></div><div class="${cl}" style="font-size:20px;font-weight:800">${a} ₹${Math.abs(s.df)} (${s.pc>0?'+':''}${s.pc}%)</div>
+ <p>👁️ <b>${v.td.toLocaleString()}</b> ${u('vt')}<br>🔥 <b>${v.h24.toLocaleString()}</b> ${u('v24')}<br>📊 ${v.tot.toLocaleString()} ${u('views')}</p>
+ <p style="font-size:13px">${u('lu')}: ${last.t?new Date(last.t).toLocaleString('en-IN'):new Date().toLocaleDateString('en-IN')} · ${u('src')}: ${last.s=='ad'?u('adm'):'AFD AQUA'}</p>
+ </div>
+ <div class="card" style="margin-top:12px"><button class="btn s ${mode=='7'?'':'b'}" onclick="mode='7';render()">${u('b7')}</button><button class="btn s ${mode=='T'?'':'b'}" onclick="mode='T';render()">${u('bT')}</button><button class="btn s ${mode=='C'?'':'b'}" onclick="mode='C';render()">${u('bC')}</button>${chart(h,mode,sp,c)}</div>
+ <div class="grid"><div class="card stat">${u('cp')}<b>₹${s.n}</b></div><div class="card stat">${u('hi')}<b class="up">₹${s.hi}</b></div><div class="card stat">${u('lo')}<b class="dn">₹${s.lo}</b></div><div class="card stat">${u('av')}<b>₹${s.av}</b></div><div class="card stat">${u('pv')}<b>₹${s.pr}</b></div><div class="card stat">${u('ch')}<b class="${cl}">${s.pc>0?'+':''}${s.pc}%</b></div></div>
+ <div class="card"><table>${h.slice().reverse().map((x,i)=>`<tr><td>${T(DAYS[i])}<br><small>${dshort(x.d)}</small></td><td class="p">₹${x.p}</td><td class="${i<6?ar(x.p-h[5-i].p)[1]:''}">${i<6?ar(x.p-h[5-i].p)[0]:''}</td></tr>`).join('')}</table></div>`}
+function home(){const v=vw('x'),n=ls('nf',0);const ST=[['👨‍🌾',12540+n,'st1','+'],['👁️',v.tot,'st2',''],['📈',1240+v.td%50,'st3',''],['📍',45,'st4',''],['🏪',320,'st5','']];
+ return`<div class="hero"><h1>${u('h1')}</h1><p>${u('h2')}</p><button class="btn" onclick="go('prices')">₹ ${u('bP')}</button><button class="btn g" onclick="go('knowledge')">📚 ${u('bK')}</button><button class="btn b" onclick="go('services')">🧪 ${u('bS')}</button><div class="big">🦐🌊</div></div>
+ <div class="grid">${ST.map(s=>`<div class="card stat">${s[0]}<b>${s[1].toLocaleString('en-IN')}${s[3]}</b>${u(s[2])}</div>`).join('')}</div><span class="tag">${u('demoN')}</span>
+ <h2>₹ ${u('prices')}</h2><div class="grid w">${[20,25,30].map(c=>pcard('Vannamei',c)).join('')}</div>
+ <h2>🔔 ${u('ntf')}</h2>${NTF.slice(0,3).map(n=>`<div class="nt ${n[0]}">${T(n[1])}</div>`).join('')}<div class="card" style="margin-top:14px;border-top:6px solid var(--o)"><div style="display:flex;align-items:center;gap:10px;margin-bottom:10px"><div style="font-size:36px">🦐</div><div><b style="font-size:18px">AFD AQUA — ${u('ct')}</b><div style="font-size:26px;font-weight:900;color:var(--g)">70137 13646</div></div></div><a class="cb" style="background:#16a34a" href="tel:+917013713646">📞 ${u('cn')}</a><a class="cb" style="background:#25D366;color:#053b1a" target="_blank" href="https://wa.me/917013713646?text=Hello%20AFD%20AQUA">💬 ${u('wc')}</a></div>`}
+function prices(){const cs=Object.keys(SP[S.sp].c);return`<h2>₹ ${u('prices')}</h2>${filters()}<p style="font-size:13px;color:var(--mu)">👁️ ${vw(S.mk+S.sp).td.toLocaleString()} ${u('vt')} · 🔥 ${vw(S.mk).h24.toLocaleString()} ${u('v24')}</p>
+ <div class="grid">${cs.map(c=>pcard(S.sp,c)).join('')}</div>
+ <div class="card"><table><tr><th>${u('cnt')}</th>${DAYS.map((_,i)=>`<th>${dshort(dstr(6-i))}</th>`).join('')}</tr>${cs.map(c=>`<tr onclick="go('detail',['${S.sp}','${c}'])" style="cursor:pointer"><td><b>${c}</b></td>${getHist(S.mk,S.sp,c).map(x=>`<td>₹${x.p}</td>`).join('')}</tr>`).join('')}</table></div><p style="font-size:11px;color:var(--mu);text-align:center">ℹ️ ${u('demo')}</p>`}
+function services(){return`<h2>🧪 ${u('services')}</h2><div class="grid w">${SV.map((s,i)=>`<div class="card" style="border-top:6px solid ${['#22d3ee','#22c55e','#ff9f1c'][i%3]}"><div style="font-size:34px">${s[0]}</div><b>${T(s[1])}</b><p>${T(s[2])}<br>📍 Andhra Pradesh</p><button class="btn s g">${u('view')}</button><a href="tel:+917013713646"><button class="btn s">📞 ${u('call')}</button></a><a target="_blank" href="https://www.google.com/maps/search/${encodeURIComponent(s[1].split('|')[0]+' near me')}"><button class="btn s b">🧭 ${u('dir')}</button></a></div>`).join('')}</div>`}
+let nf={d:10,o:0};
+function nearby(){const l=NB.filter(x=>x[2]<=nf.d&&(!nf.o||x[4]));return`<h2>📍 ${u('nearby')}</h2><div class="card"><div class="f"><div><label>${u('dst')} (km)</label><select onchange="nf.d=+this.value;render()">${[2,5,10].map(d=>`<option ${d==nf.d?'selected':''}>${d}</option>`).join('')}</select></div><div><label>${u('op')}</label><select onchange="nf.o=+this.value;render()"><option value="0">${u('all')}</option><option value="1" ${nf.o?'selected':''}>${u('op')}</option></select></div></div><button class="btn g" onclick="navigator.geolocation&&navigator.geolocation.getCurrentPosition(p=>alert(p.coords.latitude.toFixed(3)+', '+p.coords.longitude.toFixed(3)),()=>0)">📍 ${u('fn')}</button></div>
+ <div id="map" class="card" style="height:150px;display:grid;place-items:center;background:linear-gradient(135deg,#bdf0f9,#d9fbe5);color:#0b2f3d">🗺️ Map API slot (Google Maps / Leaflet) → #map</div>
+ <div class="grid w">${l.map(x=>`<div class="card"><b>${x[1]} ${x[0]}</b><p>${u('dst')}: <b>${x[2]} km</b> · ⭐ ${x[3]}<br><span class="tag ${x[4]?'ad':''}">${x[4]?u('op'):'Closed'}</span></p><button class="btn s">📞 ${u('call')}</button><button class="btn s b">🧭 ${u('dir')}</button></div>`).join('')||u('nores')}</div>`}
+function knowledge(){return`<h2>📚 ${u('knowledge')}</h2><div class="grid w">${KN.map((k,i)=>`<div class="card" style="border-top:6px solid ${['#22d3ee','#22c55e','#ff9f1c'][i%3]}"><div style="height:70px;border-radius:14px;display:grid;place-items:center;font-size:40px;background:linear-gradient(135deg,#bdf0f9,#d9fbe5)">${k[0]}</div><b>${T(k[1])}</b><p>${T(k[2])}</p><button class="btn s g" onclick="alert(T(KN[${i}][2]))">${u('read')}</button></div>`).join('')}</div>`}
+function tools(){return`<h2>🧮 ${u('tools')}</h2><div class="grid w">${CA.map((c,i)=>`<div class="card"><b>${c[0]} ${T(c[1])}</b>${c[2].map((f,j)=>`<label>${f[0]}</label><input type="number" inputmode="decimal" id="c${i}_${j}" value="${f[1]}" style="font-size:20px">`).join('')}<button class="btn" style="width:100%;margin-top:10px" onclick="rc(${i})">${u('calc')}</button><div id="r${i}"></div></div>`).join('')}</div>`}
+function rc(i){const v=CA[i][2].map((_,j)=>+$('#c'+i+'_'+j).value),r=CA[i][3](v);$('#r'+i).innerHTML=`<div class="res">${r.includes('|')?T(r):r}</div>`}
+function profile(){const me=ls('me',null);
+if(me)return`<div class="card" style="text-align:center"><div style="font-size:54px">👨‍🌾</div><h2>${u('wl')}, ${me.n}!</h2><p style="font-size:20px">📞 ${me.p}</p><button class="btn" onclick="lc()">🌐 ${u('chl')}</button><button class="btn b" onclick="sv('me',null);render()">${u('lo')}</button></div>`;
+return`<div class="card"><h2 style="margin-top:0">👤 ${u('login')} / ${u('reg')}</h2><label>${u('nm')}</label><input id="un"><label>${u('ph')}</label><input id="up" type="tel" maxlength="10" inputmode="numeric"><label>${u('pw')}</label><input id="uw" type="password"><div id="um"></div><button class="btn g" onclick="au(1)">${u('login')}</button><button class="btn" onclick="au(0)">${u('reg')}</button><button class="btn b" onclick="lc()">🌐 ${u('chl')}</button></div>`}
+function lc(){$('#lm').style.display='grid'}
+function au(l){const n=$('#un').value.trim(),p=$('#up').value.trim(),w=btoa($('#uw').value),us=ls('users',{}),e=k=>$('#um').innerHTML=`<div class="nt">${u(k)}</div>`;
+ if(!/^\d{10}$/.test(p)||$('#uw').value.length<4||(!l&&!n))return e('wr');
+ if(l){if(!us[p]||us[p].w!==w)return e('wr');sv('me',{n:us[p].n,p})}else{if(us[p])return e('ex');us[p]={n,w};sv('users',us);sv('me',{n,p})}
+ render()}
+function search(){const t=q.toLowerCase(),r=[];if(t){Object.entries(DISTS).forEach(([d,m])=>m.forEach(k=>k.toLowerCase().includes(t)&&r.push(['🏪 '+k,'prices'])));
+ Object.keys(SP).forEach(k=>(SP[k].n.toLowerCase().includes(t)||Object.keys(SP[k].c).some(c=>(c+'').includes(t)))&&r.push([SP[k].i+' '+T(SP[k].n),'prices',k]));
+ SV.forEach(s=>s.join('|').toLowerCase().includes(t)&&r.push([s[0]+' '+T(s[1]),'services']));KN.forEach(s=>s.join('|').toLowerCase().includes(t)&&r.push([s[0]+' '+T(s[2-1]),'knowledge']));NB.forEach(s=>s[0].toLowerCase().includes(t)&&r.push([s[1]+' '+s[0],'nearby']))}
+ return`<h2>🔍</h2><input id="q" value="${q}" placeholder="${u('srch')}" oninput="q=this.value;sr()" autofocus><div id="sr">${sh(r)}</div>`}
+const sh=r=>r.map(x=>`<div class="card" style="margin-top:8px;cursor:pointer" onclick="${x[2]?`S.sp='${x[2]}';`:''}go('${x[1]}')"><b>${x[0]}</b></div>`).join('')||(q?u('nores'):'');
+function sr(){const f=$('#q');const v=f.value;const keep=document.activeElement===f;page='search';const h=search();$('#sr').innerHTML=h.slice(h.indexOf('<div id="sr">')+13,h.lastIndexOf('</div>'))}
+function render(){const act=page=='detail'?'prices':page;
+ $('#tn').innerHTML=NAV.map(n=>`<a class="${act==n[0]?'on':''}" onclick="go('${n[0]}')">${n[0]=='nearby'?u('nearby'):u(n[2])}</a>`).join('');
+ $('#bn').innerHTML=[['home','🏠','home'],['prices','₹','prices'],['services','🧪','services'],['knowledge','📚','knowledge'],['profile','👤','profile']].map(n=>`<a class="${act==n[0]?'on':''}" onclick="go('${n[0]}')"><span>${n[1]}</span>${u(n[2]).split(' ')[0]}</a>`).join('');
+ $('#lg').value=L;$('#np').innerHTML=NTF.map(n=>`<div class="nt ${n[0]}">${T(n[1])}</div>`).join('');
+ $('#app').innerHTML=({home,prices,detail,services,nearby,knowledge,tools,profile,search})[page]();}
+function pick(i){L=i;sv('lang',i);sv('langSet',1);$('#lm').style.display='none';document.documentElement.lang=['en','te','hi'][i];render()}
+if(!ls('langSet',0))$('#lm').style.display='grid';
+render();
+</script></body></html>
